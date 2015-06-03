@@ -13,6 +13,21 @@
 @implementation FISAppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSUInteger counter = 0;
+    NSUInteger randomNumberOfSteps = arc4random_uniform(100) + 1;
+
+    do {
+        NSLog(@"Meep Meep");
+
+        if (counter != 0 && counter % 10 == 0)
+        {
+            NSLog(@"YOU'RE CUCKOO.");
+        }
+        
+        counter++;
+    } while (counter < randomNumberOfSteps);
+    
     return YES;
 }
 
